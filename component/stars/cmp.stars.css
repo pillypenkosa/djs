@@ -1,0 +1,16 @@
+cmp-stars {
+	all: unset;
+	display: block;
+
+	font-family: Courier;
+	color: lime;
+}
+	cmp-stars .clc {
+		cursor: pointer;
+	}
+		cmp-stars .clc:hover {
+			color: yellow;
+		}
+
+
+
