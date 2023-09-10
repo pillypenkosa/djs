@@ -23,7 +23,6 @@ class LoadDependences {
 
 
 
-
 				if ( k.id == 'arrDB' ) {
 					let script = document.createElement( 'script' );
 					script.src = `https://pillypenkosa.github.io/database/list/list.${ fileName }.js`;
@@ -36,7 +35,7 @@ class LoadDependences {
 
 				if ( k.id == 'arr' ) {
 					let script = document.createElement( 'script' );
-					script.src = `arr/arr.${ fileName }.js`;
+					script.src = `list/list.${ fileName }.js`;
 					script.setAttribute( 'defer', '' );
 					//divList.append( script ); 	// divList = <div id="divList">
 					document.head.append( script );

@@ -1,4 +1,4 @@
-const arrAny = [
+const arrListAny = [
 
 	{ id: 'any1', title: 'Any 01', },
 	{ id: 'any2', title: 'Any 02', },
@@ -7,9 +7,9 @@ const arrAny = [
 ];
 
 
-let objAny = {};
-arrAny.forEach( k => {
-	objAny[ k.id ] = k;
+let objListAny = {};
+arrListAny.forEach( k => {
+	objListAny[ k.id ] = k;
 });
 
 
