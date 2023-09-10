@@ -86,10 +86,10 @@ function Component( txt, obj = {} ) { 		// txt - назва компонента
 
 
 
-	console.log( 'txt', txt );
-	console.log( 'className', className );
-	console.log( 'tagName', tagName );
-	console.log( 'fileName', fileName );
+	//console.log( 'txt', txt );
+	//console.log( 'className', className );
+	//console.log( 'tagName', tagName );
+	//console.log( 'fileName', fileName );
 
 
 

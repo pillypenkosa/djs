@@ -19,9 +19,14 @@ class LoadDependences {
 
 			if ( k.name ) {
 
+				let fileName = k.name.toLowerCase();
+
+
+
+
 				if ( k.id == 'arrDB' ) {
 					let script = document.createElement( 'script' );
-					script.src = `https://pillypenkosa.github.io/database/list/list.${ k.name }.js`;
+					script.src = `https://pillypenkosa.github.io/database/list/list.${ fileName }.js`;
 					script.setAttribute( 'defer', '' );
 					//divList.append( script ); 	// divList = <div id="divList">
 					document.head.append( script );
@@ -31,7 +36,7 @@ class LoadDependences {
 
 				if ( k.id == 'arr' ) {
 					let script = document.createElement( 'script' );
-					script.src = `arr/arr.${ k.name }.js`;
+					script.src = `arr/arr.${ fileName }.js`;
 					script.setAttribute( 'defer', '' );
 					//divList.append( script ); 	// divList = <div id="divList">
 					document.head.append( script );
@@ -42,13 +47,13 @@ class LoadDependences {
 				if ( k.id == 'component' ) {
 
 					let css = document.createElement( 'link' );
-					css.href = `component/${ k.name }/cmp.${ k.name }.css`;
+					css.href = `component/${ fileName }/cmp.${ fileName }.css`;
 					css.rel = 'stylesheet'; 
 					css.type = 'text/css'; 
 					document.head.append( css );
 
 					let script = document.createElement( 'script' );
-					script.src = `component/${ k.name }/cmp.${ k.name }.js`;
+					script.src = `component/${ fileName }/cmp.${ fileName }.js`;
 					script.setAttribute( 'defer', '' );
 					//divComponent.append( script ); 	// divComponent = <div id="divComponent">
 					document.head.append( script );
