@@ -70,12 +70,21 @@ fg sdfgg sdf gsd getComponentHtml sdfg
 		`;
 
 
+		let description  	= 'Опис головної сторінки...';
+		let title  			= 'Головна';
 
 
 
+		document.title = title;
+
+		document.querySelectorAll( 'head meta[ name="description" ]' )[ 0 ].content 			= description;
+		document.querySelectorAll( 'head meta[ name="keywords" ]' )[ 0 ].content 				= 'Ключові слова...';
+
+		document.querySelectorAll( 'head meta[ property="og:description" ]' )[ 0 ].content 		= description;
+		document.querySelectorAll( 'head meta[ property="og:title" ]' )[ 0 ].content 			= title;
 
 
-		
+
 
 
 

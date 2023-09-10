@@ -40,6 +40,33 @@ class ComponentWinFilms {
 
 
 
+
+
+		let description  	= 'Опис сторінки з фільмами...';
+		let title  			= 'Фільми';
+
+
+
+		document.title = title;
+
+		document.querySelectorAll( 'head meta[ name="description" ]' )[ 0 ].content 			= description;
+		document.querySelectorAll( 'head meta[ name="keywords" ]' )[ 0 ].content 				= 'Кіно...';
+
+		document.querySelectorAll( 'head meta[ property="og:description" ]' )[ 0 ].content 		= description;
+		document.querySelectorAll( 'head meta[ property="og:title" ]' )[ 0 ].content 			= title;
+
+
+
+
+
+
+
+
+
+
+
+
+
 		return { html, tagParam };
 	}
 
