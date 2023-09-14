@@ -44,11 +44,11 @@ let url = new URL( txt );
 
 let aaa = null;
 
-cns( 'ok', 'Все зашибись...', );
-cns( 'err', 'Якась дічь...', aaa );
-cns( 'warning', 'Пеньок' );
-cns( 'var', 'Змінна `url`:', url );
-cns( 'var', 'Змінна `txt`:', txt );
+//cns( 'ok', 'Все зашибись...', );
+//cns( 'err', 'Якась дічь...', aaa );
+//cns( 'warning', 'Пеньок' );
+//cns( 'var', 'url', url );
+//cns( 'var', 'txt', txt );
 
 
 

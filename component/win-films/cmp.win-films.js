@@ -59,6 +59,7 @@ class ComponentWinFilms {
 
 
 
+		//addErr( 'Шо-то не работает...', );
 
 
 

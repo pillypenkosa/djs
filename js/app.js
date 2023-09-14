@@ -23,7 +23,15 @@ alert( screenWidth );
 
 
 
-let errConsole = [];
+
+let errConsole 		= [];
+//let errConsole 		= [];
+let warningConsole 	= [];
+
+//errConsole.err = [];
+//errConsole.warning = [];
+
+
 
 
 
@@ -31,32 +39,70 @@ let errConsole = [];
 function addErr( txt = '' ) {
 	if ( txt )
 		errConsole.push( txt );
+		//errConsole.err.push( txt );
 }
+
+
+function addWarning( txt = '' ) {
+	if ( txt )
+		warningConsole.push( txt );
+		//errConsole.warning.push( txt );
+}
+
+
+
+
 
 function isErr() {
 
 	let ok = 'isErr() - помилок не зафіксовано )))';
 	let err = 'isErr() - виявлені помилки:';
 
+	//console.log( errConsole.err );
+	//console.trace();
 
 
-	if ( errConsole.length ) {
+	//if ( errConsole.err || errConsole.warning ) {
+	if ( errConsole || warningConsole ) {
 
 
-		//cns( 'Бля буду, помилки хуярять... ', 'шось', 'err' );
+		//if ( errConsole.err.length ) {
+		if ( errConsole.length ) {
+			//cns( 'Бля буду, помилки хуярять... ', 'шось', 'err' );
 
-		console.log( err );
+			//console.log( err );
+			//cns( 'err', 'Помилки:', );
 
-		errConsole.forEach( k => {
-			console.log( k );
-		});
+			errConsole.forEach( k => {
+				//console.log( k );
+				cns( 'err', k, );
+			});
+		}
+
+		//if ( errConsole.warning.length ) {
+		if ( warningConsole.length ) {
+			//cns( 'Бля буду, помилки хуярять... ', 'шось', 'err' );
+
+			//console.log( err );
+			//cns( 'warning', 'Зауваження:', );
+
+			warningConsole.forEach( k => {
+				//console.log( k );
+				cns( 'warning', k, );
+			});
+		}
+
+
 
 	} else 
-		console.log( ok );
+		//console.log( ok );
 		//cns( 'ok', 'Помилок не вижу... ', );
+		cns( 'ok', 'Помилок не виявлено...', );
 
 
-	errConsole = [];	
+
+	errConsole 		= [];	
+	warningConsole 	= [];	
 }
 
 
@@ -225,8 +271,8 @@ function cns( type, txt, obj ) { 	// t - type: текст `ok`, `err`, `warning`
 	}
 
 	if ( type == 'warning' ) {
-		bgFrom 	= 'fc0';
-		bgTo 	= 'f90';
+		bgFrom 	= 'f70';
+		bgTo 	= 'fc0';
 	}
 
 	if ( type == 'var' ) {
@@ -259,21 +305,21 @@ function cns( type, txt, obj ) { 	// t - type: текст `ok`, `err`, `warning`
 		bgFrom 	= '0f0';
 		bgTo 	= '050';
 
-		console.log( `%cOk! ${ txt }`, css );
+		console.log( `%c${ txt }`, css );
 	}
 
 	if ( type == 'err' ) {
 		bgFrom 	= 'f00';
 		bgTo 	= '500';
 
-		console.log( `%cПомилка! ${ txt }`, css );
+		console.log( `%c${ txt }`, css );
 	}
 
 	if ( type == 'warning' ) {
 		bgFrom 	= 'fc0';
 		bgTo 	= 'f90';
 
-		console.log( `%cУвага! ${ txt }`, css );
+		console.log( `%c${ txt }`, css );
 	}
 
 	if ( type == 'var' ) {
@@ -282,148 +328,14 @@ function cns( type, txt, obj ) { 	// t - type: текст `ok`, `err`, `warning`
 		borderRadiusTR 	= 0; 	// L - left, R - right, T - top, B - bottom
 		borderRadiusBR 	= 0; 	// L - left, R - right, T - top, B - bottom
 
-		console.log( `%cЗмінна ${ txt }`, css );
-	}
-
-
-
-
-	//if ( obj !== undefined ) 
+		console.log( '%cЗмінна `' + txt + '`:', css );
 		console.log( obj );
 
-
-
-
-
-	return;
-
-
-	console.log( outContent, css );
-
-	//console.log( obj );
-
-
-
-
-
-
-
-
-	let arrDjs1 = {
-
-
-		aaa: { id: 1, key: '123', val: 'qwer', },
-		bbb: { id: 2, key: '456', val: 'asdf', },
-		ccc: { id: 3, key: '789', val: 'zxcv', },
-
-	} ;
-
-
-
-
-
-
-
-
-
-
-	console.groupCollapsed ( 'шо-то у Ашота 1' );
-
-		console.log( 'Какая-то жопа 11...' );
-		console.warn( 'Какая-то жопа 12...' );
-		console.error( 'Какая-то жопа 13...' );
-
-
-		//console.groupEnd();
-
-
-		console.groupCollapsed ( 'шо-то у Ашота 2' );
-
-			console.log( 'Какая-то жопа 21...' );
-			console.log( 'Какая-то жопа 22...' );
-			console.log( 'Какая-то жопа 23...' );
-
-
-		console.groupEnd();
-
-		console.log( 'просто жопа ...' );
-
-	console.groupEnd();
-
-	console.log( 'просто жопа 2...' );
-
-
-
-
-	//let css = "font-size: 20px; font-family: Courier; font-weight: bold; background: linear-gradient( to top, #0f0, #050 ); color: #fff; padding: 0 50px; border-radius: 10px;";
-
-
-	console.log( '%cЛевый текст... меняй подушки...', css );
-
-
-
-	console.warn( 'Name is not provided...' );
-	console.error( 'Какая-то памилка...' );
-
-	console.info( 555 );
-
-
-
-
-
-
-	let color = '\x1b[32m';
-
-
-
-
-	//console.clear();
-
-
-
-
-	console.trace();
-
-
-	let fruits = [ 
-		[ `&#91;Apple`, 'Orange1', 'Banana1' ], 
-		[ `&#91;Apple`, 'Orange2', 'Banana2' ], 
-		[ `&#91;Apple`, 'Orange3', 'Banana3' ], 
-		[ `&#91;Apple`, 'Orange4', 'Banana4' ], 
-		[ `&#91;Apple`, 'Orange5', 'Banana5' ], 
-	];
-
-
-
-
-
-
-
-
-
-	console.table( arrDjs1 );
-
-
-
-
-
-
-
-	//console.log( "%cExample %s", css, 'all code runs happy' );
-	
-
-	console.log( '%cExample all code runs %shappy', css, 'after555' );
-
-
-
-
-
-	console.log( color + k + ':' );
-	console.log( v );
-
-
+	}
 
 }
+
+
 
 
 

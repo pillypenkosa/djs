@@ -32,10 +32,16 @@ class Router {
 
 	static loadContent() {
 
-		let ok = `\x1b[32m ok ${ this.name }.loadContent()`;
-		let err = `\x1b[31m err ${ this.name }.loadContent()`;
+		//console.clear();
+
+		let name = this.name + '.loadContent()';
+
+		//let ok = `\x1b[32m ok ${ this.name }.loadContent()`;
+		//let err = `\x1b[31m err ${ this.name }.loadContent()`;
 
 		//return;
+
+
 
 		let hash = window.location.hash ? window.location.hash : '';
 		
@@ -57,8 +63,13 @@ class Router {
 					html = Component( cmp[ 0 ].name );
 				
 			} else {
-				addErr( err + ' - такого `url` не існує...' );
+				addWarning( name + ' ...такого `url` не існує...' );
+				
+
+				//cns( 'warning', '...такого `url` не існує...', );
+
 				html = Component( 'Win-Err404' );
+
 			}
 
 		} else 
