@@ -62,8 +62,12 @@ function isErr() {
 	//console.trace();
 
 
+	//cns( 'var', 'errConsole', errConsole );
+
+
+
 	//if ( errConsole.err || errConsole.warning ) {
-	if ( errConsole || warningConsole ) {
+	if ( errConsole.length || warningConsole.length ) {
 
 
 		//if ( errConsole.err.length ) {
@@ -101,45 +105,14 @@ function isErr() {
 
 
 
+
+
 	errConsole 		= [];	
 	warningConsole 	= [];	
 }
 
 
 //function cns( txt, obj, type = 'ok' ) { 	// t - type: текст `ok`, `err`, `warning`, 	// txt - текстова назва змінної 		// obj - змінна з конкретним змістом 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function isErr222() {
-
-	let ok = `\x1b[32m ok isErr() - помилок не зафіксовано )))`;
-	let err = `\x1b[31m err isErr() виявлені помилки:`;
-
-	if ( errConsole.length ) {
-
-		console.log( err );
-
-		errConsole.forEach( k => {
-			console.log( k );
-		});
-
-	} else 
-		console.log( ok );
-
-	errConsole = [];	
-}
 
 
 
@@ -328,12 +301,35 @@ function cns( type, txt, obj ) { 	// t - type: текст `ok`, `err`, `warning`
 		borderRadiusTR 	= 0; 	// L - left, R - right, T - top, B - bottom
 		borderRadiusBR 	= 0; 	// L - left, R - right, T - top, B - bottom
 
-		console.log( '%cЗмінна `' + txt + '`:', css );
-		console.log( obj );
+		console.log( '%c' + txt + ':', css, obj );
+		//console.log( obj );
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//console.log( window.location.search ); 
+
+
+
+
+
+cns( 'var', 'window.location.search', window.location.search.slice( 1 ) );
+
+
+
+
 
 
 
