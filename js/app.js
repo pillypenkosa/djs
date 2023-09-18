@@ -337,3 +337,17 @@ cns( 'var', 'window.location.search', window.location.search.slice( 1 ) );
 
 
 
+
+
+
+
+/*
+/ GitHub працює тільки зі знаком питання
+
+https://pillypenkosa.github.io/djs/   ?   456/sfsf4/sfsf
+*/
+
+
+
+
+
