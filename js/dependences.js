@@ -27,6 +27,16 @@ const dependences = [
 	//{ id: 'component' 			, name: 'Win-Err404' 			, route: '#left-set-err' 		, },
 	{ id: 'component' 			, name: 'Win-Films' 			, route: '#films' 				, },
 	{ id: 'component' 			, name: 'Win-Index' 			, route: '#' 					, },
+
+
+
+	{ id: 'component' 			, name: 'Win-Any-01' 			, route: '/^user\/[0-9]+$/' 	, },s
+
+
+
+
+
+
 	
 
 	{ id: 'component' 			, name: 'Win-Err404' 			, },

@@ -30,7 +30,106 @@ class Router {
 
 
 
+
+
 	static loadContent() {
+
+		let name = this.name + '.loadContent()';
+
+		//cns( 'ok', name );
+		//cns( 'var', 'window.location.search', window.location.search.slice( 1 ) );
+
+
+
+		const roites = [
+
+			{ href: '', cmp: '', }
+
+		];
+
+
+
+
+
+
+		let txt = 'user/5298789';
+		//let regexp = /\d/; 	// цифра
+		//let regexp = /^[0-9]+$/;
+		let regexp = /^user\/[0-9]+$/;
+
+
+
+		if ( regexp.test( txt ) ) {
+
+			cns( 'var', 'regexp', regexp );
+			cns( 'var', 'txt', txt );
+		
+		} else
+			cns( 'err', 'Не канає...' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		let html = 'Шось сюди виведемо...';
+
+
+
+
+
+
+
+		// відображення помилок в консолі
+		isErr();
+		document.getElementById( 'content' ).innerHTML = html;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	static loadContent222() {
 
 		//console.clear();
 

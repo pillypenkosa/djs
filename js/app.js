@@ -61,10 +61,7 @@ function isErr() {
 	//console.log( errConsole.err );
 	//console.trace();
 
-
 	//cns( 'var', 'errConsole', errConsole );
-
-
 
 	//if ( errConsole.err || errConsole.warning ) {
 	if ( errConsole.length || warningConsole.length ) {
@@ -96,14 +93,10 @@ function isErr() {
 			});
 		}
 
-
-
 	} else 
 		//console.log( ok );
 		//cns( 'ok', 'Помилок не вижу... ', );
 		cns( 'ok', 'Помилок не виявлено...', );
-
-
 
 
 
@@ -182,42 +175,6 @@ function Component( txt, obj = {} ) { 		// txt - назва компонента
 
 
 
-// подсветка кнопок
-function btnLight222( container, id ) { 	// container - блок, где расположены кнопки 		// data-id - идентификатор конкретной кнопки
-
-	// !!! в каждой кнопке должен быть класс `btn` и атрибут data-id <div class="btn" data-id=" ...anyTxt... "></div>
-	//console.log( container, id );
-	//alert( container );
-	//alert( id );
-
-	let arr = document.querySelectorAll( container + ' .btn' );
-
-	arr.forEach( k => {
-		if ( k.dataset.id == id ) 
-			k.classList.add( 'active' );
-		else 
-			k.classList.remove( 'active' );
-	});
-}
-
-
-
-
-
-
-function big1Letter222( txt ) {
-
-	return txt[ 0 ].toUpperCase() + txt.slice( 1 );
-}
-
-
-
-
-// вся строка в нижний регистр
-// toLowerCase()
-
-
-
 
 // виведення інформвції в консоль
 function cns( type, txt, obj ) { 	// t - type: текст `ok`, `err`, `warning`, 	// txt - текстова назва змінної 		// obj - змінна з конкретним змістом 
@@ -279,6 +236,7 @@ function cns( type, txt, obj ) { 	// t - type: текст `ok`, `err`, `warning`
 		bgTo 	= '050';
 
 		console.log( `%c${ txt }`, css );
+		//console.trace(  );
 	}
 
 	if ( type == 'err' ) {
@@ -316,6 +274,54 @@ function cns( type, txt, obj ) { 	// t - type: текст `ok`, `err`, `warning`
 
 
 
+// подсветка кнопок
+function btnLight222( container, id ) { 	// container - блок, где расположены кнопки 		// data-id - идентификатор конкретной кнопки
+
+	// !!! в каждой кнопке должен быть класс `btn` и атрибут data-id <div class="btn" data-id=" ...anyTxt... "></div>
+	//console.log( container, id );
+	//alert( container );
+	//alert( id );
+
+	let arr = document.querySelectorAll( container + ' .btn' );
+
+	arr.forEach( k => {
+		if ( k.dataset.id == id ) 
+			k.classList.add( 'active' );
+		else 
+			k.classList.remove( 'active' );
+	});
+}
+
+
+
+
+
+
+function big1Letter222( txt ) {
+
+	return txt[ 0 ].toUpperCase() + txt.slice( 1 );
+}
+
+
+
+
+// вся строка в нижний регистр
+// toLowerCase()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -325,7 +331,7 @@ function cns( type, txt, obj ) { 	// t - type: текст `ok`, `err`, `warning`
 
 
 
-cns( 'var', 'window.location.search', window.location.search.slice( 1 ) );
+//cns( 'var', 'window.location.search', window.location.search.slice( 1 ) );
 
 
 
