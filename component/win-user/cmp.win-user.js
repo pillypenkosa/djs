@@ -5,7 +5,7 @@
 
 
 
-class ComponentWinIndex {
+class ComponentWinUser {
 
 
 
@@ -18,31 +18,33 @@ class ComponentWinIndex {
 
 	static html( objData = {} ) {
 
-		const name = this.name + '.html()';
-		
 		this.args = objData.args ? objData.args : {}; 
+
+
+
+		let name = this.name + '.html()';
+
 
 
 
 		let tagParam = {
 			//'class' 		: 'active',
-			//'name' 			: 'Any',
+			//'name' 		: 'Any',
 			//'title' 		: 'Всплывающая подсказка',
-			//'data-id' 		: 'any-data',
-			//'onclick' 		: `${ this.name }.clc( ${ this.name }.args )`,
-			//'selected' 		: '',
+			//'data-id' 	: 'any-data',
+			//'onclick' 	: `${ this.name }.clc( ${ this.name }.args )`,
+			//'selected' 	: '',
 			//'defer' 		: '',
 		};
+
+
+
 
 
 
 		let html = '';
 
 		html = name;
-
-
-
-
 
 
 
@@ -57,7 +59,7 @@ class ComponentWinIndex {
 		});
 
 
-		cns( 'ok', name );
+
 
 		return { html, tagParam };
 	}

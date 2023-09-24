@@ -7,45 +7,48 @@ const dependences = [
 
 
 
-	// масиви-списки з ЦЬОГО проекту ( свої )
-
-	{ id: 'arr' 				, name: 'any' 	, },
-	//{ id: 'arr' 				, name: '' 	, },
-
-
-
-
-
-	// масиви-списки з інших сайтів ( сторонні )
-	{ id: 'arrDB' 				, name: 'country' 	, },
-
-	//{ id: 'arrDB' 				, name: '' 	, },
-
-
-
-
-	//{ id: 'component' 			, name: 'Win-Err404' 			, route: '#left-set-err' 		, },
-	{ id: 'component' 			, name: 'Win-Films' 			, route: '#films' 				, },
-	{ id: 'component' 			, name: 'Win-Index' 			, route: '#' 					, },
-
-
-
-	{ id: 'component' 			, name: 'Win-Any-01' 			, route: '/^user\/[0-9]+$/' 	, },s
-
-
-
-
-
-
+	// масиви-списки з інших сайтів ( сторонні ) ----------------------------------------------------------------------------------
 	
-
-	{ id: 'component' 			, name: 'Win-Err404' 			, },
-	{ id: 'component' 			, name: 'Aside' 				, },
-	{ id: 'component' 			, name: 'Footer' 				, },
-	{ id: 'component' 			, name: 'Header' 				, },
+	{ db: 'country' 	, },  // https://pillypenkosa.github.io/database/list/list.country.js
 
 
-	//{ id: 'component' 			, name: '' 				, },
+
+
+
+	// масиви-списки з ЦЬОГО проекту ( свої ) -------------------------------------------------------------------------------------
+
+	{ arr: 'any' 	, }, 		// 	list\list.country.js
+
+
+
+
+
+	// компоненти загальні --------------------------------------------------------------------------------------------------------
+
+	{ cmp: 'Win-Err404' 			, },
+	{ cmp: 'Aside' 					, },
+	{ cmp: 'Footer' 				, },
+	{ cmp: 'Header' 				, },
+
+
+
+
+
+	// компоненти-контенти // win-сторiнки ----------------------------------------------------------------------------------------
+	
+	{ cmp: 'Win-Index' 				, regexp: /^index$/ 					, }, 	// regexp - url-маршрут (route) в адресному рядку
+
+	//{ cmp: 'Win-Cars' 				, regexp: /^cars$/ 						, }, 	// cars
+	//{ cmp: 'Win-Film' 				, regexp: /^film\/[0-9A-Za-z]+$/ 		, }, 	// film/{ txt }
+	{ cmp: 'Win-Films' 				, regexp: /^films$/ 					, },
+	{ cmp: 'Win-User' 				, regexp: /^user\/[0-9]+$/ 				, }, 	// user/{ n }
+	//{ cmp: 'Win-User' 				, regexp: /^user\/[0-9A-Za-z]+$/ 		, }, 	// user/{ txt }
+	//{ cmp: 'Win-Users' 				, regexp: /^users$/ 					, },
+
+
+
+
+
 
 
 

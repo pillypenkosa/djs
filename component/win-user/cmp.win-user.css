@@ -1,0 +1,18 @@
+cmp-win-user {
+	/*
+	all: unset;
+	display: block;
+	font-family: Courier;
+	color: lime;
+*/
+}
+	cmp-win-user .clc {
+		cursor: pointer;
+	}
+		cmp-win-user .clc:hover {
+			color: yellow;
+		}
+
+
+
+

@@ -18,9 +18,14 @@ class ComponentAside {
 
 	static arrBtns = [
 
-		{ title: 'Головна' 			, id: 'index' 			, href: '#', },
-		{ title: 'Фільми' 			, id: 'films' 			, href: '#films', },
-		{ title: 'Error 404' 		, id: 'err404' 			, href: '#any-left-page', },
+		{ title: 'Головна' 				, id: 'index' 			, href: '?', },
+		{ title: 'Фільми' 				, id: 'films' 			, href: '?films', },
+		{ title: 'Користувач 555' 		, id: 'user' 			, href: '?user/555', },
+
+
+
+
+		{ title: 'Error 404' 		, id: 'err404' 			, href: '?any-left-page', },
 
 
 
@@ -75,6 +80,19 @@ class ComponentAside {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+	// ЗРОБИТИ ОКРЕМОЮ фуекцією для переходів по сторінках
 
 	static clc( elem ) {
 

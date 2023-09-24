@@ -21,9 +21,7 @@ class ComponentWinErr404 {
 		this.args = objData.args ? objData.args : {}; 
 
 
-		let name = 'html';
-		let ok = `\x1b[32m ok ${ this.name }.${ name }() `;
-		let err = `\x1b[31m err ${ this.name }.${ name }() `;
+		let name = this.name + '.html()';
 
 
 
@@ -38,6 +36,18 @@ class ComponentWinErr404 {
 		};
 
 		let html = 'Error 404! Нажаль, такої сторінки не існує... ';
+
+
+
+		setMeta({
+			title 			: 'Error 404',
+			description 	: 'Помилка 404! Сторінка не існує...',
+			keywords 		: '...',
+			image 			: 'img.jpg',
+			url 			: 'url',
+			type 			: 'Type' ,
+			site_name 		: 'Назва сайту, мабуть стале значення... ' + name,
+		});
 
 
 

@@ -17,12 +17,13 @@ class ComponentWinFilms {
 
 	static html( objData = {} ) {
 
+		const name = this.name + '.html()';
+		
 		this.args = objData.args ? objData.args : {}; 
 
 
-		let name = 'html';
-		let ok = `\x1b[32m ok ${ this.name }.${ name }() `;
-		let err = `\x1b[31m err ${ this.name }.${ name }() `;
+
+
 
 
 
@@ -36,27 +37,7 @@ class ComponentWinFilms {
 			//'defer' 		: '',
 		};
 
-		let html = 'Я компонент ' + this.name;
-
-
-
-
-
-		let description  	= 'Опис сторінки з фільмами...';
-		let title  			= 'Фільми';
-
-
-
-		document.title = title;
-
-		document.querySelectorAll( 'head meta[ name="description" ]' )[ 0 ].content 			= description;
-		document.querySelectorAll( 'head meta[ name="keywords" ]' )[ 0 ].content 				= 'Кіно...';
-
-		document.querySelectorAll( 'head meta[ property="og:description" ]' )[ 0 ].content 		= description;
-		document.querySelectorAll( 'head meta[ property="og:title" ]' )[ 0 ].content 			= title;
-
-
-
+		let html = name;
 
 
 		//addErr( 'Шо-то не работает...', );
@@ -65,7 +46,15 @@ class ComponentWinFilms {
 
 
 
-
+		setMeta({
+			title 			: name,
+			description 	: 'Опис' + name,
+			keywords 		: 'Ключові слова...' + name,
+			image 			: 'img/pic/kartinka-' + name + '.jpg',
+			url 			: 'url/any/there/' + name,
+			type 			: 'Тіпі-тіп ' + name,
+			site_name 		: 'Назва сайту, мабуть стале значення... ' + name,
+		});
 
 
 		return { html, tagParam };

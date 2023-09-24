@@ -2,35 +2,8 @@ const appProjectName = 'DJS';
 
 
 
-
-
-
-/*
-let screenHeight = window.screen.height;
-let screenWidth = window.screen.width;
-
-alert( screenHeight );
-alert( screenWidth );
-*/
-
-
-
-
-
-
-	//height: 500px;
-
-
-
-
-
 let errConsole 		= [];
-//let errConsole 		= [];
 let warningConsole 	= [];
-
-//errConsole.err = [];
-//errConsole.warning = [];
-
 
 
 
@@ -41,7 +14,6 @@ function addErr( txt = '' ) {
 		errConsole.push( txt );
 		//errConsole.err.push( txt );
 }
-
 
 function addWarning( txt = '' ) {
 	if ( txt )
@@ -55,24 +27,15 @@ function addWarning( txt = '' ) {
 
 function isErr() {
 
-	let ok = 'isErr() - помилок не зафіксовано )))';
-	let err = 'isErr() - виявлені помилки:';
+	const name = 'Component()';
 
-	//console.log( errConsole.err );
-	//console.trace();
 
-	//cns( 'var', 'errConsole', errConsole );
 
-	//if ( errConsole.err || errConsole.warning ) {
 	if ( errConsole.length || warningConsole.length ) {
-
 
 		//if ( errConsole.err.length ) {
 		if ( errConsole.length ) {
 			//cns( 'Бля буду, помилки хуярять... ', 'шось', 'err' );
-
-			//console.log( err );
-			//cns( 'err', 'Помилки:', );
 
 			errConsole.forEach( k => {
 				//console.log( k );
@@ -84,9 +47,6 @@ function isErr() {
 		if ( warningConsole.length ) {
 			//cns( 'Бля буду, помилки хуярять... ', 'шось', 'err' );
 
-			//console.log( err );
-			//cns( 'warning', 'Зауваження:', );
-
 			warningConsole.forEach( k => {
 				//console.log( k );
 				cns( 'warning', k, );
@@ -94,21 +54,12 @@ function isErr() {
 		}
 
 	} else 
-		//console.log( ok );
-		//cns( 'ok', 'Помилок не вижу... ', );
 		cns( 'ok', 'Помилок не виявлено...', );
-
 
 
 	errConsole 		= [];	
 	warningConsole 	= [];	
 }
-
-
-//function cns( txt, obj, type = 'ok' ) { 	// t - type: текст `ok`, `err`, `warning`, 	// txt - текстова назва змінної 		// obj - змінна з конкретним змістом 
-
-
-
 
 
 
@@ -117,9 +68,7 @@ function isErr() {
 // возврат HTML-разметки конкретного компонента
 function Component( txt, obj = {} ) { 		// txt - назва компонента, obj - дані для компонента
 
-	// txt - Win-Car-Engine // кожне слово з ВЕЛИКОЇ літери // Всі слова через дефіс
-
-	//console.log( 'txt:', txt );
+	const name = 'Component()';
 
 
 
@@ -134,18 +83,6 @@ function Component( txt, obj = {} ) { 		// txt - назва компонента
 	let tagName = 'cmp-' + txt.toLowerCase();
 	let fileName = txt.toLowerCase();
 
-
-
-	//console.log( 'txt', txt );
-	//console.log( 'className', className );
-	//console.log( 'tagName', tagName );
-	//console.log( 'fileName', fileName );
-
-
-
-
-		
-	//Router.loadApp();
 
 
 	// дані з конкретного компонента
@@ -163,14 +100,9 @@ function Component( txt, obj = {} ) { 		// txt - назва компонента
 	}
 
 
+
 	return '<' + tagName + ' ' + tagParam + '>' + ( objIni.html ? objIni.html : '' ) + '</' + tagName + '>';
 }
-
-
-
-
-
-
 
 
 
@@ -188,6 +120,8 @@ function cns( type, txt, obj ) { 	// t - type: текст `ok`, `err`, `warning`
 	let css 			= '';
 
 	let outContent 		= '';
+
+	//console.trace();
 
 
 	if ( type == 'ok' ) {
@@ -260,11 +194,56 @@ function cns( type, txt, obj ) { 	// t - type: текст `ok`, `err`, `warning`
 		borderRadiusBR 	= 0; 	// L - left, R - right, T - top, B - bottom
 
 		console.log( '%c' + txt + ':', css, obj );
-		//console.log( obj );
-
 	}
 
 }
+
+
+
+
+// встановлення МЕТА-тегів
+function setMeta( obj = {} ) {
+
+	document.title = 
+		document.querySelectorAll( 'head meta[ property="og:title" ]' )[ 0 ].content = 
+			obj.title ? obj.title : '';
+
+
+	document.querySelectorAll( 'head meta[ name="description" ]' )[ 0 ].content = 
+		document.querySelectorAll( 'head meta[ property="og:description" ]' )[ 0 ].content = 
+			obj.description ? obj.description : '';
+
+
+	document.querySelectorAll( 'head meta[ name="keywords" ]' )[ 0 ].content 			= obj.keywords ? obj.keywords : '';
+
+	document.querySelectorAll( 'head meta[ property="og:image" ]' )[ 0 ].content 		= obj.image ? obj.image : '';
+	document.querySelectorAll( 'head meta[ property="og:url" ]' )[ 0 ].content 			= obj.url ? obj.url : '';
+	document.querySelectorAll( 'head meta[ property="og:type" ]' )[ 0 ].content 		= obj.type ? obj.type : '';
+	document.querySelectorAll( 'head meta[ property="og:site_name" ]' )[ 0 ].content 	= obj.site_name ? obj.site_name : '';
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -305,53 +284,13 @@ function big1Letter222( txt ) {
 
 
 
-// вся строка в нижний регистр
-// toLowerCase()
 
 
 
 
 
+//console.trace();
 
-
-
-
-
-
-
-
-
-
-
-
-
-//console.log( window.location.search ); 
-
-
-
-
-
-//cns( 'var', 'window.location.search', window.location.search.slice( 1 ) );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-/ GitHub працює тільки зі знаком питання
-
-https://pillypenkosa.github.io/djs/   ?   456/sfsf4/sfsf
-*/
 
 
 

@@ -7,26 +7,20 @@ class Router {
 
 	static loadApp() {
 
-
-		//let name = 'loadApp';
-		let ok = `\x1b[32m ok ${ this.name }.loadApp()`;
-		let err = `\x1b[31m err ${ this.name }.loadApp()`;
+		let name = this.name + '.loadApp()';
 
 
-		let html = 
-			'<header>' + Component( 'Header' ) + '</header>' +
-			'<div id="middle">' +
-				'<aside>' + Component( 'Aside' ) + '</aside>' +
-				'<div id="content"></div>' +
-			'</div>' +
-			'<footer>' + Component( 'Footer' ) + '</footer>'
-		;
-
-		document.querySelector( 'app' ).innerHTML = html;
+		document.querySelector( 'app' ).innerHTML = `
+			<header>${ Component( 'Header' ) } </header>
+			<div id="middle">
+				<aside>${ Component( 'Aside' ) }</aside>
+				<div id="content"></div>
+			</div>
+			<footer>${ Component( 'Footer' ) }</footer>
+		`;
 
 		this.loadContent();
 	}
-
 
 
 
@@ -40,63 +34,41 @@ class Router {
 		//cns( 'var', 'window.location.search', window.location.search.slice( 1 ) );
 
 
+		const search = window.location.search.slice( 1 );
 
-		const roites = [
+		//cns( 'var', 'search', search );
 
-			{ href: '', cmp: '', }
-
-		];
-
+		let cmpName = '';
 
 
+		if ( search ) {
+			//cns( 'ok', 'Є якийсь `window.location.search`' );
 
+			dependences.forEach( k => {
 
-
-		let txt = 'user/5298789';
-		//let regexp = /\d/; 	// цифра
-		//let regexp = /^[0-9]+$/;
-		let regexp = /^user\/[0-9]+$/;
-
-
-
-		if ( regexp.test( txt ) ) {
-
-			cns( 'var', 'regexp', regexp );
-			cns( 'var', 'txt', txt );
-		
-		} else
-			cns( 'err', 'Не канає...' );
+				if ( k.regexp ) {
+					if ( k.regexp.test( search )) 
+						cmpName = k.cmp;
+				}
+			});
 
 
 
+			if ( !cmpName ) {
+
+				//cns( 'warning', 'Немає компонента для цього URL... тому вставимо Win-Err404' );
+				addWarning( 'URL не існує...' );
+				cmpName = 'Win-Err404';
+			} 
+
+		} else 
+			cmpName = 'Win-Index';
 
 
+		//cns( 'var', 'cmpName', cmpName );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		let html = 'Шось сюди виведемо...';
-
-
-
-
-
-
-
-		// відображення помилок в консолі
 		isErr();
-		document.getElementById( 'content' ).innerHTML = html;
+		document.getElementById( 'content' ).innerHTML = Component( cmpName );
 	}
 
 
