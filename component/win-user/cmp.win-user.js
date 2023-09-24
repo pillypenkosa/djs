@@ -50,12 +50,12 @@ class ComponentWinUser {
 
 		setMeta({
 			title 			: name,
-			description 	: 'Опис' + name,
+			description 	: 'Опис ' + name,
 			keywords 		: 'Ключові слова...' + name,
-			image 			: 'img/pic/kartinka-' + name + '.jpg',
-			url 			: 'url/any/there/' + name,
+			//image 			: 'img/pic/kartinka-' + name + '.jpg',
+			//url 			: 'url/any/there/' + name,
 			type 			: 'Тіпі-тіп ' + name,
-			site_name 		: 'Назва сайту, мабуть стале значення... ' + name,
+			//site_name 		: 'Назва сайту, мабуть стале значення... ' + name,
 		});
 
 

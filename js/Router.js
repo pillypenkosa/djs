@@ -53,7 +53,6 @@ class Router {
 			});
 
 
-
 			if ( !cmpName ) {
 
 				//cns( 'warning', 'Немає компонента для цього URL... тому вставимо Win-Err404' );

@@ -204,22 +204,79 @@ function cns( type, txt, obj ) { 	// t - type: текст `ok`, `err`, `warning`
 // встановлення МЕТА-тегів
 function setMeta( obj = {} ) {
 
+
+	const empty = '';
+
 	document.title = 
 		document.querySelectorAll( 'head meta[ property="og:title" ]' )[ 0 ].content = 
-			obj.title ? obj.title : '';
+			document.querySelectorAll( 'head meta[ name="twitter:title" ]' )[ 0 ].content = 
+				obj.title ? obj.title : empty;
 
 
 	document.querySelectorAll( 'head meta[ name="description" ]' )[ 0 ].content = 
 		document.querySelectorAll( 'head meta[ property="og:description" ]' )[ 0 ].content = 
-			obj.description ? obj.description : '';
+			document.querySelectorAll( 'head meta[ name="twitter:description" ]' )[ 0 ].content = 
+				obj.description ? obj.description : empty;
 
 
-	document.querySelectorAll( 'head meta[ name="keywords" ]' )[ 0 ].content 			= obj.keywords ? obj.keywords : '';
+	document.querySelectorAll( 'head meta[ name="keywords" ]' )[ 0 ].content 			= obj.keywords ? obj.keywords : empty;
 
-	document.querySelectorAll( 'head meta[ property="og:image" ]' )[ 0 ].content 		= obj.image ? obj.image : '';
-	document.querySelectorAll( 'head meta[ property="og:url" ]' )[ 0 ].content 			= obj.url ? obj.url : '';
-	document.querySelectorAll( 'head meta[ property="og:type" ]' )[ 0 ].content 		= obj.type ? obj.type : '';
-	document.querySelectorAll( 'head meta[ property="og:site_name" ]' )[ 0 ].content 	= obj.site_name ? obj.site_name : '';
+	document.querySelectorAll( 'head meta[ property="og:image" ]' )[ 0 ].content =		
+		document.querySelectorAll( 'head meta[ name="twitter:image:src" ]' )[ 0 ].content = 
+			obj.image ? obj.image : empty;
+
+
+
+	document.querySelectorAll( 'head meta[ property="og:type" ]' )[ 0 ].content 		= obj.type ? obj.type : empty;
+	
+
+
+
+
+
+
+
+
+
+/*
+
+"og:title" — указывает заголовок статьи.
+"og:description" — указывает краткое описание, которое выводится при формировании превью ссылки.
+"og:image" — ссылка на картинку, которая будет отображаться в посте.
+"og:url" — ссылка на страницу сайта.
+"og:type" — указывает тип страницы (статья, новость, видео, категория и т. д.), можно использовать по умолчанию "article".
+"og:site_name" — название сайта.
+
+"og:locale" — указывает локализацию (язык сайта), можно использовать значение "ru_RU" по умолчанию.
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 

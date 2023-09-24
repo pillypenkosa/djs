@@ -38,18 +38,15 @@ class ComponentWinErr404 {
 		let html = 'Error 404! Нажаль, такої сторінки не існує... ';
 
 
-
 		setMeta({
 			title 			: 'Error 404',
-			description 	: 'Помилка 404! Сторінка не існує...',
-			keywords 		: '...',
-			image 			: 'img.jpg',
-			url 			: 'url',
-			type 			: 'Type' ,
-			site_name 		: 'Назва сайту, мабуть стале значення... ' + name,
+			//description 	: '',
+			//keywords 		: '',
+			//image 			: '',
+			//url 			: '',
+			//type 			: '' ,
+			//site_name 		: '',
 		});
-
-
 
 		return { html, tagParam };
 	}
