@@ -33,6 +33,8 @@ class Router {
 
 	static loadContent() {
 
+		//console.clear();
+
 		let name = this.name + '.loadContent()';
 
 		//cns( 'ok', name );
@@ -61,7 +63,7 @@ class Router {
 			if ( !cmpName ) {
 
 				//cns( 'warning', 'Немає компонента для цього URL... тому вставимо Win-Err404' );
-				addWarning( 'URL не існує...' );
+				addErr( 'URL не існує...' );
 				cmpName = 'Win-Err404';
 			} 
 
@@ -71,8 +73,8 @@ class Router {
 
 		//cns( 'var', 'cmpName', cmpName );
 
-		isErr();
 		document.getElementById( 'content' ).innerHTML = Component( cmpName );
+		isErr();
 	}
 
 

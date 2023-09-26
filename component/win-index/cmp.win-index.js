@@ -49,7 +49,7 @@ class ComponentWinIndex {
 		});
 
 
-		cns( 'ok', name );
+		cns( 'var', 'name', name );
 
 		return { html, tagParam };
 	}
