@@ -85,8 +85,10 @@ function Component( txt, obj = {} ) { 		// txt - назва компонента
 
 
 
+	//const txtEavl_1 = className + '.html( obj )';
+
 	// дані з конкретного компонента
-	let objIni = eval( `${ className }.html( obj )` );
+	let objIni = eval( className + '.html( obj )' );
 
 	//console.log( objIni );
 
@@ -100,6 +102,8 @@ function Component( txt, obj = {} ) { 		// txt - назва компонента
 	}
 
 
+	// допоміжна приблуда // можно прибрати
+	cns( 'var', 'задіяно компонент', className + '.html()' );
 
 	return '<' + tagName + ' ' + tagParam + '>' + ( objIni.html ? objIni.html : '' ) + '</' + tagName + '>';
 }
@@ -251,32 +255,7 @@ function setMeta( obj = {} ) {
 
 
 
-
-
-
-
-
-
-
-
-
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
@@ -285,8 +264,12 @@ function setMeta( obj = {} ) {
 
 
 
+// відображення в консолі факт задії компонента
+function cnsInfoCmp ( txt ) {
 
-
+	if ( isCmpInfo )
+		cns( 'var', 'name', txt );
+}
 
 
 

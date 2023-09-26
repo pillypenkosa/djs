@@ -16,12 +16,11 @@ class ComponentFooter {
 
 	static html( objData = {} ) {
 
+		const name = this.name + '.html()';
+		
 		this.args = objData.args ? objData.args : {}; 
 
 
-		let name = 'html';
-		let ok = `\x1b[32m ok ${ this.name }.${ name }() `;
-		let err = `\x1b[31m err ${ this.name }.${ name }() `;
 
 
 
@@ -35,7 +34,7 @@ class ComponentFooter {
 			//'defer' 		: '',
 		};
 
-		let html = '© pillypenkosa@gmail.com 2023. Footer прижат к низу экрана';
+		let html = '© 2023 pillypenkosa@gmail.com';
 
 
 

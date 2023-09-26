@@ -21,7 +21,6 @@ class ComponentWinIndex {
 		this.args = objData.args ? objData.args : {}; 
 
 
-
 		let tagParam = {
 			//'class' 		: 'active',
 			//'name' 		: 'Any',
@@ -49,7 +48,6 @@ class ComponentWinIndex {
 		});
 
 
-		cns( 'var', 'name', name );
 
 		return { html, tagParam };
 	}

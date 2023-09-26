@@ -24,9 +24,6 @@ class ComponentWinFilms {
 
 
 
-
-
-
 		let tagParam = {
 			//'class' 		: 'active',
 			//'name' 			: 'Any',

@@ -18,13 +18,9 @@ class ComponentWinUser {
 
 	static html( objData = {} ) {
 
+		const name = this.name + '.html()';
+		
 		this.args = objData.args ? objData.args : {}; 
-
-
-
-		let name = this.name + '.html()';
-
-
 
 
 		let tagParam = {
