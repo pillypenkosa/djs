@@ -16,7 +16,7 @@ class ComponentFooter {
 
 	static html( objData = {} ) {
 
-		const name = this.name + '.html()';
+		const fooName = this.name + '.html()';
 		
 		this.args = objData.args ? objData.args : {}; 
 

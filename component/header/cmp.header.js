@@ -16,7 +16,7 @@ class ComponentHeader {
 
 	static html( objData = {} ) {
 
-		const name = this.name + '.html()';
+		const fooName = this.name + '.html()';
 		
 		this.args = objData.args ? objData.args : {}; 
 
@@ -44,16 +44,11 @@ class ComponentHeader {
 
 
 	static clc( objData = {} ) {
-
-		let name = 'clc';
-		let ok = `\x1b[32m ok ${ this.name }.${ name }( ${ objData } ) `;
-		let err = `\x1b[31m err ${ this.name }.${ name }( ${ objData } ) `;
+		const fooName = this.name + '.clc()';
 
 
 
-		//alert( ok );
-		console.log( ok );
-		console.log( objData );
+
 
 	}
 

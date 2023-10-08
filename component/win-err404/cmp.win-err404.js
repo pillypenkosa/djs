@@ -18,7 +18,7 @@ class ComponentWinErr404 {
 
 	static html( objData = {} ) {
 
-		const name = this.name + '.html()';
+		const fooName = this.name + '.html()';
 		
 		this.args = objData.args ? objData.args : {}; 
 
@@ -62,8 +62,8 @@ class ComponentWinErr404 {
 
 	static clc( data ) {
 
-		console.log( data );
-		alert( data );
+		const fooName = this.name + '.clc()';
+
 
 	}
 

@@ -15,8 +15,7 @@ class ComponentWinIndex {
 
 
 	static html( objData = {} ) {
-
-		const name = this.name + '.html()';
+		const fooName = this.name + '.html()';
 		
 		this.args = objData.args ? objData.args : {}; 
 
@@ -58,7 +57,7 @@ class ComponentWinIndex {
 
 
 	static clc( data ) {
-		const name = this.name + '.clc()';
+		const fooName = this.name + '.clc()';
 
 
 		cns( 'var', 'data', data );

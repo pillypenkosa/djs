@@ -1,7 +1,7 @@
 @chcp 65001
 
-@set up=WinFabulaPostanova
-@set low=win-fabula-postanova
+@set up=WinAny
+@set low=win-any
 @set pref=__NEW_COMPONENT_
 @set intro=© 2023 DJS
 
@@ -72,9 +72,7 @@
 	echo. >> component\%pref%%low%\cmp.%low%.js
 
 	echo %tab%static html( objData = {} ^) { >> component\%pref%%low%\cmp.%low%.js
-	echo. >> component\%pref%%low%\cmp.%low%.js
-
-	echo %tab%%tab%const name = this.name + '.html(^)'; >> component\%pref%%low%\cmp.%low%.js
+	echo %tab%%tab%const fooName = this.name + '.html(^)'; >> component\%pref%%low%\cmp.%low%.js
 	echo. >> component\%pref%%low%\cmp.%low%.js
 
 	echo %tab%%tab%this.args = objData.args ? objData.args : {}; >> component\%pref%%low%\cmp.%low%.js
@@ -95,7 +93,7 @@
 	echo. >> component\%pref%%low%\cmp.%low%.js
 	echo. >> component\%pref%%low%\cmp.%low%.js
 
-	echo %tab%%tab%let html = name; >> component\%pref%%low%\cmp.%low%.js
+	echo %tab%%tab%let html = fooName; >> component\%pref%%low%\cmp.%low%.js
 	echo. >> component\%pref%%low%\cmp.%low%.js
 	echo. >> component\%pref%%low%\cmp.%low%.js
 	echo. >> component\%pref%%low%\cmp.%low%.js
@@ -119,9 +117,10 @@
 	echo. >> component\%pref%%low%\cmp.%low%.js
 
 	echo %tab%static clc( data ^) { >> component\%pref%%low%\cmp.%low%.js
-	echo %tab%%tab%const name = this.name + '.clc(^)'; >> component\%pref%%low%\cmp.%low%.js
+	echo %tab%%tab%const fooName = this.name + '.clc(^)'; >> component\%pref%%low%\cmp.%low%.js
 	echo. >> component\%pref%%low%\cmp.%low%.js
 
+	echo %tab%%tab%//cns( 'var', 'fooName', fooName ^); >> component\%pref%%low%\cmp.%low%.js
 	echo %tab%%tab%//cns( 'var', 'data', data ^); >> component\%pref%%low%\cmp.%low%.js
 	echo. >> component\%pref%%low%\cmp.%low%.js
 	

@@ -39,7 +39,7 @@ class ComponentAside {
 
 	static html( objData = {} ) {
 
-		const name = this.name + '.html()';
+		const fooName = this.name + '.html()';
 
 		this.args = objData.args ? objData.args : {}; 
 
@@ -87,15 +87,8 @@ class ComponentAside {
 
 	static clc( elem ) {
 
-		//btnLight( 'cmp-aside', elem.dataset.id );
-		//console.log( elem.dataset.href );
 
-
-
-		//return;
-
-
-
+		const fooName = this.name + '.clc()';
 
 
 
