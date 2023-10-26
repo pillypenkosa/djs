@@ -120,8 +120,8 @@
 	echo %tab%%tab%const fooName = this.name + '.clc(^)'; >> component\%pref%%low%\cmp.%low%.js
 	echo. >> component\%pref%%low%\cmp.%low%.js
 
-	echo %tab%%tab%//cns( 'var', 'fooName', fooName ^); >> component\%pref%%low%\cmp.%low%.js
-	echo %tab%%tab%//cns( 'var', 'data', data ^); >> component\%pref%%low%\cmp.%low%.js
+	echo %tab%%tab%//console.log( fooName', fooName ^); >> component\%pref%%low%\cmp.%low%.js
+	echo %tab%%tab%//console.log( data', data ^); >> component\%pref%%low%\cmp.%low%.js
 	echo. >> component\%pref%%low%\cmp.%low%.js
 	
 	echo %tab%} >> component\%pref%%low%\cmp.%low%.js
