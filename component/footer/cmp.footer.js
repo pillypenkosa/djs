@@ -38,7 +38,7 @@ class ComponentFooter {
 
 
 
-		return { html, tagParam };
+		return { tagParam, html };
 	}
 
 

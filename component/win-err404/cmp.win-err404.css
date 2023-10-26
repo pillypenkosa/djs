@@ -4,7 +4,7 @@ cmp-win-err404 {
 
 	padding: 10px 50px;
 	border-radius: 10px;
-	font-family: Courier;
+	/*font-family: Courier;*/
 	font-weight: bold;
 	background-color: red;
 	background: linear-gradient( to bottom, #000, #f00 );

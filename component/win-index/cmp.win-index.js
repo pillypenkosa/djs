@@ -15,6 +15,7 @@ class ComponentWinIndex {
 
 
 	static html( objData = {} ) {
+
 		const fooName = this.name + '.html()';
 		
 		this.args = objData.args ? objData.args : {}; 
@@ -32,23 +33,26 @@ class ComponentWinIndex {
 
 
 
-		let html = name;
+		//let html = '<div class="info">Бажаю здоров\'я! ))</div>';
+		let html = `<div>${ fooName }</div>`;
+
+
 
 
 
 		setMeta({
-			title 			: name,
-			description 	: 'Опис' + name,
+			title 			: '',
+			description 	: '',
 			//keywords 		: 'Ключові слова...' + name,
-			//image 			: 'img/pic/kartinka-' + name + '.jpg',
+			image 			: '',
 			//url 			: 'url/any/there/' + name,
 			//type 			: 'Тіпі-тіп ' + name,
-			//site_name 		: 'Назва сайту, мабуть стале значення... ' + name,
+			//site_name 	: 'Назва сайту, мабуть стале значення... ' + name,
 		});
 
 
 
-		return { html, tagParam };
+		return { tagParam, html };
 	}
 
 
@@ -60,7 +64,8 @@ class ComponentWinIndex {
 		const fooName = this.name + '.clc()';
 
 
-		cns( 'var', 'data', data );
+		//console.log( 'fooName', fooName );
+		//console.log( 'data', data );
 
 	}
 

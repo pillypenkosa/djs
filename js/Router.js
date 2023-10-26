@@ -15,10 +15,10 @@ class Router {
 		let name = this.name + '.loadApp()';
 
 
+		//		<aside>${ Component( 'Aside' ) }</aside>
 		document.querySelector( 'app' ).innerHTML = `
 			<header>${ Component( 'Header' ) } </header>
 			<div id="middle">
-				<aside>${ Component( 'Aside' ) }</aside>
 				<div id="content"></div>
 			</div>
 			<footer>${ Component( 'Footer' ) }</footer>
