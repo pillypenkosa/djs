@@ -62,9 +62,8 @@ class ComponentWinErr404 {
 	static clc( data ) {
 		const fooName = this.name + '.clc()';
 
-
-		console.log( 'fooName', fooName );
-		console.log( 'data', data );
+		//console.log( 'fooName', fooName );
+		//console.log( 'data', data );
 
 	}
 

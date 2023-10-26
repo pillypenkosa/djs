@@ -16,7 +16,6 @@ class ComponentHeader {
 
 
 	static html( objData = {} ) {
-
 		const fooName = this.name + '.html()';
 		
 		this.args = objData.args ? objData.args : {}; 
@@ -41,7 +40,7 @@ class ComponentHeader {
 		let html = `
 			<div class="head">
 				<div class="title">${ appProjectName }</div>
-				<div class="btn-menu" onclick="ComponentHeader.clc()">
+				<div class="btn-menu pointer" onclick="ComponentHeader.clc()">
 					<img src="img/pic/menu.png" alt="close">
 				</div>
 			</div>
@@ -55,9 +54,11 @@ class ComponentHeader {
 
 
 	static clc() {
-		const fooName = this.name + '.html()';
+		const fooName = this.name + '.clc()';
+		//console.log( 'fooName', fooName );
+		//console.log( 'data', data );
 
-		//cns( 'var', 'fooName', fooName );
+
 
 		let elem = document.querySelector( '.nav-menu' );
 		if ( this.tfMenu ) {

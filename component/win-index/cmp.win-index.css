@@ -8,105 +8,21 @@ cmp-win-index {
 	height: 100%;
 	width: 100%;
 
-
-
 	display: flex;
+	/*
 	justify-content: center; /* Центр горизонталь */
+	/*
 	align-items: center;     /* Центр вертикаль */
 
-
-
-
 	background: linear-gradient( to top, #099, #003 );
-
-
-
-
-
-
-/*
-
-	vertical-align: middle;
-	padding: 0 auto;
-	text-align: center;
-*/
-
-	/*vertical-align: middle;*/
-
-	/*text-align: center;*/
-
-
-
-
-	/*font-family: Courier;*/
 	color: lime;
 }
 	cmp-win-index .clc {
-		cursor: pointer;
+
 	}
 		cmp-win-index .clc:hover {
 			color: yellow;
 		}
-
-
-
-
-
-
-cmp-win-index .screen {
-	/*text-align: center;*/
-}
-
-
-	cmp-win-index .avatar {
-		height: 200px;
-		width: 200px;
-		margin: 0 auto;
-	}
-		cmp-win-index .avatar img {
-			height: 100%;
-			width: 100%;
-			/*border: 1px solid #ccc;*/
-
-			border-top-right-radius: 100px;
-			border-top-left-radius: 100px;
-
-			border-bottom-right-radius: 100px;
-			border-bottom-left-radius: 100px;
-		}
-
-
-
-
-
-
-
-
-
-
-
-	cmp-win-index .hi {
-		margin: 20px 0;
-		font-size: 20px;
-		font-weight: bold;
-		color: #fff;
-
-		text-align: center;
-
-
-	}
-
-
-	cmp-win-index .book {
-		height: 200px;
-		width: 300px;
-		margin: 0 auto;
-	}
-		cmp-win-index .book img {
-			height: 100%;
-			width: 100%;
-		}
-
 
 
 

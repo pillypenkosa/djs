@@ -33,7 +33,7 @@
 
 	echo } >> component\%pref%%low%\cmp.%low%.css
 	echo %tab%cmp-%low% .clc { >> component\%pref%%low%\cmp.%low%.css
-	echo %tab%%tab%cursor: pointer; >> component\%pref%%low%\cmp.%low%.css
+	echo . >> component\%pref%%low%\cmp.%low%.css
 	echo %tab%} >> component\%pref%%low%\cmp.%low%.css
 	echo %tab%%tab%cmp-%low% .clc:hover { >> component\%pref%%low%\cmp.%low%.css
 	echo %tab%%tab%%tab%color: yellow; >> component\%pref%%low%\cmp.%low%.css
@@ -99,7 +99,7 @@
 	echo. >> component\%pref%%low%\cmp.%low%.js
 
 	echo %tab%%tab%setMeta({ >> component\%pref%%low%\cmp.%low%.js
-	echo %tab%%tab%%tab%title %tab%%tab%%tab%: name, >> component\%pref%%low%\cmp.%low%.js
+	echo %tab%%tab%%tab%title %tab%%tab%%tab%: fooName, >> component\%pref%%low%\cmp.%low%.js
 	echo %tab%%tab%%tab%description %tab%: 'Опис...', >> component\%pref%%low%\cmp.%low%.js
 	echo %tab%%tab%%tab%//image %tab%%tab%: '', >> component\%pref%%low%\cmp.%low%.js
 
@@ -108,7 +108,7 @@
 	echo. >> component\%pref%%low%\cmp.%low%.js
 	echo. >> component\%pref%%low%\cmp.%low%.js
 
-	echo %tab%%tab%return { html, tagParam };  >> component\%pref%%low%\cmp.%low%.js
+	echo %tab%%tab%return { tagParam, html };  >> component\%pref%%low%\cmp.%low%.js
 	echo %tab%} >> component\%pref%%low%\cmp.%low%.js
 	echo. >> component\%pref%%low%\cmp.%low%.js
 	echo. >> component\%pref%%low%\cmp.%low%.js

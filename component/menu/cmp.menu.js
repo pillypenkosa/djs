@@ -15,16 +15,9 @@ class ComponentMenu {
 
 	static arrBtns = [
 
-		{ title: 'Головна' 					, id: 'index' 					, href: '?', },
-		{ title: 'Фабули постанов ПДР' 		, id: 'fabuly_postanov_pdr' 	, href: '?fabuly-postanov-pdr', },
-		//{ title: 'Фабули протоколів ПДР' 	, id: 'fabuly_protokoliv_pdr' 	, href: '?fabuly-protokoliv-pdr', },
-		{ title: 'Права та обов\'язки' 		, id: 'rights' 					, href: '?rights', },
+		{ title: 'Головна' 				, id: 'index' 				, href: '?', },
+		{ title: 'Ще шось...' 			, id: 'any-thing' 			, href: '?any-thing', },
 
-
-		
-
-		//{ title: 'КУпАП' 					, id: 'kupap' 					, href: '?kupap', },
-		//{ title: 'Фабули протоколів ПДР' 	, id: 'fabuly_protokoliv_pdr' 	, href: '?fabuly-protokoliv-pdr', },
 
 	];
 
@@ -36,7 +29,6 @@ class ComponentMenu {
 
  
 	static html( objData = {} ) { 
- 
 		const name = this.name + '.html()'; 
  
 		this.args = objData.args ? objData.args : {}; 
@@ -57,21 +49,21 @@ class ComponentMenu {
  
 		let html = ''; 
  		this.arrBtns.forEach( k => {
-			html += `<div class="btn" onclick="${ this.name }.clc( this )" data-id="${ k.id }" data-href="${ k.href }">${ k.title }</div>`;
+			html += `<div class="btn pointer" onclick="${ this.name }.clc( this )" data-id="${ k.id }" data-href="${ k.href }">${ k.title }</div>`;
 		});
  
  
-		return { html, tagParam };  
+		return { tagParam, html };  
 	} 
  
  
  
  
  
-	static clc( elem ) { 
-		const name = this.name + '.clc()'; 
- 
-		//cns( 'var', 'data', elem.dataset.href ); 
+	static clc( elem ) {  
+		const fooName = this.name + '.clc()';
+		//console.log( 'fooName', fooName );
+		//console.log( 'data', data );
 
 
 		ComponentHeader.clc();
@@ -85,10 +77,6 @@ class ComponentMenu {
 
 
 
-
-
-
- 
 	} 
  
  
