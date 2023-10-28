@@ -1,58 +1,37 @@
 
 
-
-
-
 cmp-header {
-
 	position: fixed;
 	left: 0;
 	right: 0;
-	background: linear-gradient( to bottom, #009, #099 );	
+	background: var( --bg-b );
 }
 
+	cmp-header .head {
+		display: flex;
+		justify-content: space-between;
+		font-size: 40px;
+		font-weight: bold;
+		color: #fff;
+	}
+
+	cmp-header .title{
+		margin: 0 0 0 10px;
+	}
 
 
+	cmp-header .btn-menu {
+		position: relative;
+		top: 5px;
+		right: 5px;
+	}
 
 
-cmp-header .head {
-	display: flex;
-	justify-content: space-between;
-	font-size: 40px;
-	font-weight: bold;
-	color: #fff;
-}
-
-
-
-
-
-
-cmp-header .title{
-	margin: 0 0 0 10px;
-}
-
-
-
-cmp-header .btn-menu {
-	/*margin: 0 10px 0 0;*/
-	/*font-size: 75%;*/
-
-	position: relative;
-
-	top: 5px;
-	right: 5px;
-}
-
-
-
-cmp-header .nav-menu {
-
-	position: absolute;
-	right: 0;
-	font-size: 20px;
-
-}
+	cmp-header .nav-menu {
+		position: absolute;
+		right: 0;
+		font-size: 20px;
+	}
 
 
 

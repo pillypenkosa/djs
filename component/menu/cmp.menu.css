@@ -1,49 +1,31 @@
 /* © 2023 DJS */ 
- 
- 
- 
+
+
+
 cmp-menu { 
 
 	display: block;
 	padding: 5px;
- 	border-radius: 5px;
-	/*background: linear-gradient( to bottom, #009, #099 );*/
-	/*background: linear-gradient( to right, #ccc, #fff );*/
+	border-radius: 5px;
 	background-color: #ddd;
-
- 
 } 
-	cmp-menu .clc { 
 
+	cmp-menu .btn {
+		margin: 0 0 1px 0;
+		padding: 10px 30px;
+		text-align: center;
+		border-radius: 5px;
+		font-weight: bold;
+		border: 1px solid #fff;
+		background: linear-gradient( to bottom, #bbb, #eee );
+		color: #000;
 	} 
-		cmp-menu .clc:hover { 
-			color: yellow; 
+		cmp-menu .btn:hover { 
+			background: var( --bg-b );
+			color: #fff;
 		} 
- 
- 
- 
- 
- cmp-menu .btn {
-
- 	margin: 0 0 1px 0;
- 	padding: 10px 30px;
- 	text-align: center;
- 	border-radius: 5px;
- 	font-weight: bold;
-
- 	border: 1px solid #aaa;
 
 
-	/*background: linear-gradient( to bottom, #009, #099 );*/
-	background: linear-gradient( to bottom, #aaa, #fff );
-	background-color: red;
-	color: #000;
- }
- 
-	 cmp-menu .btn:hover {
-		background: linear-gradient( to bottom, #009, #099 );
-		color: #fff;
-	 }
 
 
 

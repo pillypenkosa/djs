@@ -4,7 +4,7 @@ cmp-footer {
 	text-align: center;
 /*
 	font-family: Courier;*/
-	background: linear-gradient( to top, #099, #009 );
+	background: var( --bg-b );
 	color: #fff;
 }
 

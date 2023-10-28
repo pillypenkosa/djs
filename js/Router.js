@@ -15,7 +15,7 @@ class Router {
 		let name = this.name + '.loadApp()';
 
 
-		//		<aside>${ Component( 'Aside' ) }</aside>
+/*
 		document.querySelector( 'app' ).innerHTML = `
 			<header>${ Component( 'Header' ) } </header>
 			<div id="middle">
@@ -23,6 +23,18 @@ class Router {
 			</div>
 			<footer>${ Component( 'Footer' ) }</footer>
 		`;
+
+
+*/
+
+/*
+		let app = document.createElement( 'div' );
+		app.innerHTML = App.html();
+		document.querySelector( 'app' ).replaceWith( app );
+*/
+
+
+		document.querySelector( 'app' ).innerHTML = App.html();
 
 		this.loadContent();
 	}

@@ -1,7 +1,7 @@
 @chcp 65001
 
-@set up=WinAny
-@set low=win-any
+@set up=App
+@set low=app
 @set pref=__NEW_COMPONENT_
 @set intro=© 2023 DJS
 
@@ -20,36 +20,7 @@
 ) else (
 
 	mkdir "component\%pref%%low%"
-
-
-	echo /* %intro% */ >> component\%pref%%low%\cmp.%low%.css
-	echo. >> component\%pref%%low%\cmp.%low%.css
-	echo. >> component\%pref%%low%\cmp.%low%.css
-	echo. >> component\%pref%%low%\cmp.%low%.css
-
-
-	echo cmp-%low% { >> component\%pref%%low%\cmp.%low%.css
-	echo. >> component\%pref%%low%\cmp.%low%.css
-
-	echo } >> component\%pref%%low%\cmp.%low%.css
-	echo %tab%cmp-%low% .clc { >> component\%pref%%low%\cmp.%low%.css
-	echo . >> component\%pref%%low%\cmp.%low%.css
-	echo %tab%} >> component\%pref%%low%\cmp.%low%.css
-	echo %tab%%tab%cmp-%low% .clc:hover { >> component\%pref%%low%\cmp.%low%.css
-	echo %tab%%tab%%tab%color: yellow; >> component\%pref%%low%\cmp.%low%.css
-	echo %tab%%tab%} >> component\%pref%%low%\cmp.%low%.css
-	echo. >> component\%pref%%low%\cmp.%low%.css
-	echo. >> component\%pref%%low%\cmp.%low%.css
-	echo. >> component\%pref%%low%\cmp.%low%.css
-	echo. >> component\%pref%%low%\cmp.%low%.css
-	echo. >> component\%pref%%low%\cmp.%low%.css
-	echo. >> component\%pref%%low%\cmp.%low%.css
-	echo. >> component\%pref%%low%\cmp.%low%.css
-	echo. >> component\%pref%%low%\cmp.%low%.css
-	echo. >> component\%pref%%low%\cmp.%low%.css
-	echo. >> component\%pref%%low%\cmp.%low%.css
-
-
+	echo /* %intro% */ cmp-%low% {} >> component\%pref%%low%\cmp.%low%.css
 
 
 

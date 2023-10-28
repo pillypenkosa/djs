@@ -1,3 +1,22 @@
+:root {
+
+	--bg1: #013;
+	--bg2: #079;
+
+	--bg-t: linear-gradient( to top, var( --bg1 ), var( --bg2 ) );
+	--bg-b: linear-gradient( to bottom, var( --bg1 ), var( --bg2 ) );
+	--bg-l: linear-gradient( to left, var( --bg1 ), var( --bg2 ) );
+	--bg-r: linear-gradient( to right, var( --bg1 ), var( --bg2 ) );
+
+}
+
+
+
+
+
+
+
+
 
 /*
 @font-face {
@@ -21,24 +40,13 @@ body {
 	
 	margin: 0;
 	padding: 0;
-/*
-	background: linear-gradient( to right, #111, #117 );
-*/
-
-	/*color: lime;*/
-
-
-
-	background: linear-gradient( to right, #009, #099 );
 	
 }
 
 app {
 
 	min-height: 100%;
-
 	display: flex;
-
 
 /*
 	flex-direction: row;
@@ -124,27 +132,20 @@ flex-flow: <'flex-direction'> || <'flex-wrap'>
 
 
 #middle {
-
-	margin: 46px 0 0 0;
-
+	margin: 45px 0 0 0;
 	display: flex; 		/* для выравнивания блоков `aside` и `content` */
 	flex: 1 1 auto; 	/* для общего участия прижатия футера в макете ( растягивание и сжатие блока ) */
 /*
 	или flex-grow: 1;
 */
-
-	/*background: linear-gradient( to right, #000, #007 );*/
 }
 
 
-#middle #content {
+
+#content {
 	width: 100%;
-
-
-
+	background: var( --bg-r );
 }
-
-
 
 
 
@@ -155,18 +156,16 @@ table {
 	border-collapse: collapse;	/* рамка одинарная общая на две ячейки */
 }
 	table td {
-
 		border: 1px solid #333;
 		text-align: center;
 	}
 
-
-
-
-
 .pointer {
 	cursor: pointer;
 }
+
+
+
 
 
 
