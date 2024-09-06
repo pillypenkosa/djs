@@ -44,6 +44,10 @@ const dependences = [
 	{ cmp: 'Win-Index' 					, regexp: /^index$/ 					, }, 	// regexp - url-маршрут (route) в адресному рядку
 
 
+	{ cmp: 'Win-Index' 					, regexp: /^any-thing-1$/ 					, }, 	// regexp - url-маршрут (route) в адресному рядку
+
+
+
 
 	//{ cmp: 'Win-User' 			, regexp: /^user\/[0-9]+$/ 				, }, 	// user/{ n }
 	//{ cmp: 'Win-User' 			, regexp: /^user\/[0-9A-Za-z]+$/ 		, }, 	// user/{ txt }
