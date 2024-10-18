@@ -1,9 +1,9 @@
 @chcp 65001
 
-@set up=App
-@set low=app
+@set up=WinAny
+@set low=win-any
 @set pref=__NEW_COMPONENT_
-@set intro=© 2023 DJS
+@set intro=© 2024 DJS
 
 
 
@@ -92,7 +92,7 @@
 	echo. >> component\%pref%%low%\cmp.%low%.js
 
 	echo %tab%%tab%//console.log( 'fooName: ', fooName ^); >> component\%pref%%low%\cmp.%low%.js
-	echo %tab%%tab%//console.log( 'data', data ^); >> component\%pref%%low%\cmp.%low%.js
+	echo %tab%%tab%//console.log( 'data: ', data ^); >> component\%pref%%low%\cmp.%low%.js
 	echo. >> component\%pref%%low%\cmp.%low%.js
 	
 	echo %tab%} >> component\%pref%%low%\cmp.%low%.js
