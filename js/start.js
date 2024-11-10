@@ -1,8 +1,109 @@
+(function() {
+
+
+
+/*
+	<script src="js/project.js"></script>
+	<script src="js/App.js"></script>
+	<script src="js/dependences.js"></script>
+
+*/
 
 
 
 
-LoadDependences.load();
+
+	[ 'version', 'project', 'App', 'dependences', ].forEach( k => {
+
+
+
+
+		let script = document.createElement( 'script' );
+		script.src = `js/${ k }.js`;
+		script.setAttribute( 'defer', '' );
+		//divList.append( script ); 	// divList = <div id="divList">
+		document.head.append( script );
+
+
+
+
+	});
+
+
+
+
+
+
+
+	//<script src="js/version.js"></script>
+
+
+
+
+
+
+	dependences.forEach( k => {
+
+
+		// массиви-списки сторонніх сайтів
+		if ( k.db ) {
+			if ( k.site ) {
+
+				let script = document.createElement( 'script' );
+				script.src = `https://pillypenkosa.github.io/${ k.site }/list/list.${ k.db }.js`;
+				script.setAttribute( 'defer', '' );
+				//divList.append( script ); 	// divList = <div id="divList">
+				document.head.append( script );
+			}
+		}
+
+
+
+		// массиви-списки свого особистого застосування
+		if ( k.arr ) {
+			let script = document.createElement( 'script' );
+			script.src = `list/list.${ k.arr }.js`;
+			script.setAttribute( 'defer', '' );
+			//divList.append( script ); 	// divList = <div id="divList">
+			document.head.append( script );
+		}
+
+
+
+		// компоненти
+		if ( k.cmp ) {
+
+			let fileName = k.cmp.toLowerCase();
+
+			// підключення css-файла компонента
+			let css = document.createElement( 'link' );
+			css.href = `component/${ fileName }/cmp.${ fileName }.css`;
+			css.rel = 'stylesheet'; 
+			css.type = 'text/css'; 
+			document.head.append( css );
+
+			// підключення файла самого компонента
+			let script = document.createElement( 'script' );
+			script.src = `component/${ fileName }/cmp.${ fileName }.js`;
+			script.setAttribute( 'defer', '' );
+			document.head.append( script );
+		}
+
+	});
+
+
+})();
+
+
+
+
+
+
+
+
+
+
+//LoadDependences.load();
 
 
 
@@ -11,109 +112,9 @@ window.onload = function() {
 	Router.loadApp();
 
 
-/*
-	let windowInnerHeight = window.innerHeight
-	let windowInnerWidth = window.innerWidth
-
-	//console.log( windowInnerHeight );
-	//console.log( windowInnerWidth );
-
-	let divMiddle = document.getElementById( 'middle' );
-	//let style = window.getComputedStyle( divMiddle, null );
-
-	//element.style.backgroundColor;
-
-	//console.log( divMiddle.style.height = ( windowInnerHeight - 100 ) + 'px' );
-	//document.querySelectorAll( 'cmp-app' )[ 0 ].innerHTML = ComponentHeader.html() + ComponentMiddle.html(); 
-*/
 
 
 };
-
-
-
-
-let txt = 'https://djs.com.ua/url?q=qwerty&win=page1#anyhash';
-
-
-
-let url = new URL( txt );
-
-//console.log( txt );
-
-
-let aaa = null;
-
-//cns( 'ok', 'Все зашибись...', );
-//cns( 'err', 'Якась дічь...', aaa );
-//cns( 'warning', 'Пеньок' );
-//cns( 'var', 'url', url );
-//cns( 'var', 'txt', txt );
-
-
-
-
-//cns( 'ok', txt );
-
-
-
-
-
-//cns( 'Помилка', txt, 'err' );
-//cns( 'Увага', txt, 'warning' );
-//cns( 'Змінна', txt, 'var' );
-
-
-
-
-
-
-
-
-/*
-
-
-console.log( '\x1b[32m url:' );
-console.log( url );
-
-
-console.log( url.protocol );
-console.log( url.host );
-console.log( url.pathname );
-
-
-console.log( '\x1b[32m searchParams:' );
-console.log( url.searchParams );
-
-
-console.log( '\x1b[32m searchParams.get( q ):' );
-console.log( url.searchParams.get( 'q' ));
-
-
-
-console.log( '\x1b[32m searchParams.get( win ):');
-console.log( url.searchParams.get( 'win' ));
-
-
-console.log( '\x1b[32m hash:' );
-console.log( url.hash );
-
-*/
-
-
-
-
-/*
-		let name = 'html';
-		let ok = `\x1b[32m ok ${ this.name }.${ name }() `;
-		let err = `\x1b[31m err ${ this.name }.${ name }() `;
-
-
-*/
-
-
-
-
 
 
 

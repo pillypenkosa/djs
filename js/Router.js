@@ -86,7 +86,8 @@ class Router {
 		//cns( 'var', 'cmpName', cmpName );
 
 		document.getElementById( 'content' ).innerHTML = Component( cmpName );
-		isErr();
+
+		//isErr();
 	}
 
 
@@ -198,17 +199,6 @@ class Router {
 		}
 	}
 
-
-
-	// подсветка активных элементов, например кнопок в навигации или изменения чего-либо в хедере, футере и т.д. и т.п.
-	static activeElem222( txt ) { // txt
-
-
-
-
-
-
-	}
 
 
 
