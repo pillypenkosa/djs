@@ -1,44 +1,6 @@
 const appProjectName = 'DJS';
 
 
-const objSymbol = [
-
-
-
-	'11023', 	// ⬏
-	'11127', 	// ⭷
-	'11008', 	// ⬀
-	'11111', 	// ⭧
-	'8663', 	// ⇗
-	'10166', 	// ➶
-	'9741', 	// ☍
-	'11797', 	// ⸕
-	'11189', 	// ⮵
-	'9166', 	// ⏎
-	'11181', 	// ⮭
-	'11173', 	// ⮥
-	'11100', 	// ⭜
-	'11086', 	// ⭎
-	'11016', 	// ⬈
-	'10555',  	// ⤻
-	'10548', 	// ⤴
-	'10138', 	// ➚
-	'8626', 	// ↲
-	'8599', 	// ↗
-	'8921', 	// ⋙
-
-	'🔗', 	// 🔗 
-
-
-];
-
-
-
-const symbolLink = '&#' + objSymbol[ 0 ] ;
-
-
-
-
 
 
 
@@ -247,33 +209,62 @@ function cns( type, txt, obj ) { 	// t - type: текст `ok`, `err`, `warning`
 
 
 // встановлення МЕТА-тегів
-function setMeta( obj = {} ) {
+function setMeta ( obj = {} ) {
 
 
-	const empty = '';
+
+	let title = '';
+	if ( obj.title ) {
+
+		title += obj.title;
+
+		if ( obj.year ) 
+			title += ' (' + obj.year + ')';
+	}
+
+
 
 	document.title = 
-		document.querySelectorAll( 'head meta[ property="og:title" ]' )[ 0 ].content = 
-			document.querySelectorAll( 'head meta[ name="twitter:title" ]' )[ 0 ].content = 
-				obj.title ? obj.title : empty;
-
-
-	document.querySelectorAll( 'head meta[ name="description" ]' )[ 0 ].content = 
-		document.querySelectorAll( 'head meta[ property="og:description" ]' )[ 0 ].content = 
-			document.querySelectorAll( 'head meta[ name="twitter:description" ]' )[ 0 ].content = 
-				obj.description ? obj.description : empty;
-
-
-	document.querySelectorAll( 'head meta[ name="keywords" ]' )[ 0 ].content 			= obj.keywords ? obj.keywords : empty;
-
-	document.querySelectorAll( 'head meta[ property="og:image" ]' )[ 0 ].content =		
-		document.querySelectorAll( 'head meta[ name="twitter:image:src" ]' )[ 0 ].content = 
-			obj.image ? obj.image : empty;
+		document.querySelector( 'head meta[ property="og:title" ]' ).content = 
+			title;
 
 
 
-	document.querySelectorAll( 'head meta[ property="og:type" ]' )[ 0 ].content 		= obj.type ? obj.type : empty;
-	
+
+
+	document.querySelector( 'head meta[ name="description" ]' ).content = 
+		document.querySelector( 'head meta[ property="og:description" ]' ).content = 
+			obj.description ? obj.description : '';
+
+
+
+
+
+	//console.log( document.querySelector( 'head link[ rel="image_src" ]' ) );
+	document.querySelector( 'head link[ rel="image_src" ]' ).href =
+		document.querySelector( 'head meta[ property="og:image" ]' ).content =
+			document.querySelector( 'head meta[ property="og:image:url" ]' ).content =
+				obj.image ? obj.image : '';
+
+
+
+
+
+	document.querySelector( 'head meta[ name="keywords" ]' ).content = 
+		obj.keywords ? obj.keywords : '';
+
+
+
+
+
+	document.querySelector( 'head meta[ property="og:site_name" ]' ).content = appProjectName;
+
+	document.querySelector( 'head meta[ property="og:url" ]' ).content = 'https://pillypenkosa.github.io/movies';
+
+
+
+
+
 
 
 

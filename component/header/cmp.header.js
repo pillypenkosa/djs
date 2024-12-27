@@ -1,4 +1,4 @@
-//console.log( '' );
+
 
 
 
@@ -11,8 +11,6 @@ class ComponentHeader {
 	static args = {};
 
 
-	// чи відображати меню 	
-	static tfMenu = true; 		// при першому завантаженні застосування - TRUE !!!
 
 
 	static html( objData = {} ) {
@@ -35,17 +33,36 @@ class ComponentHeader {
 
 
 
-		//let html = appProjectName + ' ' + appVersion;
-		//&#128660;
+
+		let clsUnvisible = '';
+		if ( Router.urlGET ) {
+			if ( Router.urlGET.win ) {
+				if ( Router.urlGET.win == 'index' || Router.urlGET.win == 'movie' ) 
+					clsUnvisible = 'unvisible';
+			}
+		}
+
+
+
+
 		let html = `
 			<div class="head">
 				<div class="title">${ appProjectName }</div>
-				<div class="btn-menu pointer" onclick="ComponentHeader.clc()">
-					<img src="img/pic/menu.png" alt="close">
+
+				<div class="nav">
+					<div class="btn pointer" onclick="ComponentHeader.clcFilter()">
+						<img src="img/pic/filter.png" alt="menu">
+					</div>
+
+					<div class="btn pointer" onclick="ComponentHeader.clcMenu()">
+						<img src="img/pic/menu.png" alt="menu">
+					</div>
 				</div>
 			</div>
 			<div class="nav-menu"></div>
+			<div class="filter"></div>
 		`;
+			//<div class="nav-menu ${ clsUnvisible }">${ Component( 'Menu' ) }</div>
 
 		return { tagParam, html };
 	}
@@ -53,27 +70,88 @@ class ComponentHeader {
 
 
 
-	static clc() {
+	static clcMenu() {
 		const fooName = this.name + '.clc()';
 		//console.log( 'fooName', fooName );
 		//console.log( 'data', data );
 
 
-
-		let elem = document.querySelector( '.nav-menu' );
-		if ( this.tfMenu ) {
-
-			elem.innerHTML = Component( 'Menu' );
-
-		} else
-			elem.innerHTML = '';
+		//document.querySelector( '.nav-menu' ).classList.toggle( 'unvisible' );
 
 
-		this.tfMenu = !this.tfMenu;
+		let bodyMenu = document.querySelector( 'cmp-header .nav-menu' );
+
+		if ( bodyMenu.innerHTML ) 
+			this.delHtmlMenu();
+
+		else 
+			this.addHtmlMenu();
 	}
 
 
 
+
+
+
+	static clcFilter() {
+		const fooName = this.name + '.clc()';
+		//console.log( 'fooName', fooName );
+		//console.log( 'data', data );
+
+		//document.querySelector( '.nav-menu' ).classList.toggle( 'unvisible' );
+
+		let bodyMenu = document.querySelector( 'cmp-header .filter' );
+
+		if ( bodyMenu.innerHTML ) 
+			this.delHtmlFilter();
+
+		else 
+			this.addHtmlFilter();
+	}
+
+
+
+
+
+	static addHtmlMenu() {
+		document.querySelector( 'cmp-header .nav-menu' ).innerHTML = Component( 'Menu' );
+	}
+
+	static delHtmlMenu() {
+		document.querySelector( 'cmp-header .nav-menu' ).innerHTML = '';
+
+		//document.querySelector( '.nav-menu' ).classList.add( 'unvisible' );
+	}
+
+
+
+
+
+
+
+
+	static addHtmlFilter() {
+		document.querySelector( 'cmp-header .filter' ).innerHTML = Component( 'Filter-People' );
+	}
+
+	static delHtmlFilter() {
+		document.querySelector( 'cmp-header .filter' ).innerHTML = '';
+
+		//document.querySelector( '.nav-menu' ).classList.add( 'unvisible' );
+	}
+
+
+
+
+
+
+
+/*
+	static hide222() {
+		document.querySelector( '.nav-menu' ).classList.add( 'unvisible' );
+	}
+
+*/
 
 
 

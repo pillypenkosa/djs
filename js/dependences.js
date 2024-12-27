@@ -9,7 +9,10 @@ const dependences = [
 
 	// масиви-списки з інших сайтів ( сторонні ) ----------------------------------------------------------------------------------
 	
-	{ db: 'country' 	, site: 'db', },  // https://pillypenkosa.github.io/   ${ k.site }   /list/list.   ${ k.db }   .js
+		// https://pillypenkosa.github.io/   ${ k.site }   /list/list.   ${ k.db }   .js
+	
+	{ db: 'people' 		, site: 'media' 	, },  
+	{ db: 'films' 		, site: 'movies' 	, },  
 
 
 
@@ -17,21 +20,48 @@ const dependences = [
 
 	// масиви-списки з ЦЬОГО проекту ( свої ) -------------------------------------------------------------------------------------
 
-	{ arr: 'any' 			, },
+
+
+
+
+	// сервіси ---------------------------------------------------------------------------------------------------------------------
+
+	//{ service: 'prepare' 			, },
 	
-
-
 
 
 
 	// компоненти загальні --------------------------------------------------------------------------------------------------------
 
+	{ cmp: 'Filter-People' 			, },
 
-	{ cmp: 'Win-Err404' 			, },
-	{ cmp: 'Footer' 				, },
+	{ cmp: 'Spoyler' 				, },
 	{ cmp: 'Menu' 					, },
-	{ cmp: 'Header' 				, },
 
+	{ cmp: 'Spoyler-Body-People' 	, },
+	{ cmp: 'Spoyler-Body-Movie' 	, },
+
+
+
+
+
+
+
+
+
+
+	{ cmp: 'Logo' 				, },
+	{ cmp: 'Footer' 			, },
+	{ cmp: 'Header' 			, },
+	{ cmp: 'Win-Err404' 		, },
+
+
+
+
+
+
+
+	//{ cmp: 'Franchise' 			, },
 
 
 
@@ -41,20 +71,12 @@ const dependences = [
 
 	// компоненти-контенти // win-сторiнки ----------------------------------------------------------------------------------------
 	
-	{ cmp: 'Win-Index' 					, regexp: /^index$/ 					, }, 	// regexp - url-маршрут (route) в адресному рядку
+	{ cmp: 'Win-Index' 				, win: /^index$/ 					, }, 	// regexp - url-маршрут (route) в адресному рядку
+	{ cmp: 'Win-Movies' 			, win: /^movies$/ 				, }, 	
+	{ cmp: 'Win-People' 			, win: /^people$/ 				, }, 	
+	
 
-
-	//{ cmp: 'Win-Index' 					, regexp: /^any-thing-1$/ 					, }, 	// regexp - url-маршрут (route) в адресному рядку
-
-
-
-
-	//{ cmp: 'Win-User' 			, regexp: /^user\/[0-9]+$/ 				, }, 	// user/{ n }
-	//{ cmp: 'Win-User' 			, regexp: /^user\/[0-9A-Za-z]+$/ 		, }, 	// user/{ txt }
-	//{ cmp: 'Win-Users' 			, regexp: /^users$/ 					, },
-
-
-
+	//{ cmp: 'Win-Uid' 					, win: /^user\/[0-9A-Za-z]+$/ 		, }, 	// user/{ txt }
 
 
 

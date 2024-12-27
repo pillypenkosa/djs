@@ -33,7 +33,7 @@ class ComponentFooter {
 			//'defer' 		: '',
 		};
 
-		let html = '© 2024 pillypenkosa@gmail.com';
+		let html = `© ${ TotalApp.year } pillypenkosa@gmail.com`;
 
 
 

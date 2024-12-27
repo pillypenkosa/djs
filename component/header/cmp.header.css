@@ -1,9 +1,10 @@
-
-
 cmp-header {
+
 	position: fixed;
 	left: 0;
 	right: 0;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 	background: var( --bg-b );
 }
 
@@ -15,16 +16,12 @@ cmp-header {
 		color: #fff;
 	}
 
-	cmp-header .title{
+	cmp-header .title {
 		margin: 0 0 0 10px;
 	}
 
 
-	cmp-header .btn-menu {
-		position: relative;
-		top: 5px;
-		right: 5px;
-	}
+
 
 
 	cmp-header .nav-menu {
@@ -32,6 +29,36 @@ cmp-header {
 		right: 0;
 		font-size: 20px;
 	}
+
+
+
+	cmp-header .filter {
+		position: absolute;
+		right: 0;
+		font-size: 20px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+	cmp-header .btn {
+		display: inline-block;
+		position: relative;
+		margin: 0 0 0 -15px;
+		top: 5px;
+		right: 5px;
+	}
+
+
+
+
 
 
 
