@@ -33,9 +33,9 @@ class ComponentSpoyler {
 			//'class' 		: '', 
 			//'name' 		: '', 
 			//'title' 		: '', 
-			//'data-key' 		: objData.key, 
-			'data-id' 		: objData.id, 
-			//'onclick' 		: `${ this.name }.clc( this )`,
+			//'data-key' 	: '', 
+			//'data-id' 		: objData.id,
+			//'onclick' 	: '',
 			//'selected' 	: '', 
 			//'defer' 		: '', 
 		}; 
@@ -51,7 +51,7 @@ class ComponentSpoyler {
 
  
 		let html = `
-			<div class="title" data-cmp="${ objData.cmp }" onclick="${ this.name }.clc( this )">
+			<div class="title" data-id="${ objData.id }" data-cmp="${ objData.cmp }" onclick="${ this.name }.clc( this )">
 				<div class="txt">${ htmlTitle }</div>
 				<div class="pm" title="Розгорнути / згорнути">${ this.pmClose }</div>
 			</div>
@@ -79,8 +79,15 @@ class ComponentSpoyler {
 		//console.log( 'fooName: ', fooName ); 
 		//console.log( 'elem: ', elem );
 
+
+
+
+
+
 		let elemParent 		= elem.closest( 'cmp-spoyler' );
-		let id 				= elemParent.dataset.id;
+		let id 				= elem.dataset.id;
+
+		//console.log( 'elemParent: ', elemParent );
 
 
 		let cmpName 		= elem.dataset.cmp;
@@ -88,7 +95,15 @@ class ComponentSpoyler {
 		//console.log( 'insert: ', insert );
 		//console.log( 'id: ', id );
 
-		let elemBody 		= document.querySelector( `cmp-spoyler[ data-id="${ id }" ] .body` );
+		//let elemBody 		= document.querySelector( `cmp-spoyler[ data-id="${ id }" ] .body` );
+
+
+
+		let elemBody 		= elemParent.querySelector( '.body' );
+
+
+		//console.log( 'elemBody: ', elemBody );
+		//console.log( 'cmpName: ', cmpName );
 
 		//console.log( 'elemBody: ', elemBody );
 

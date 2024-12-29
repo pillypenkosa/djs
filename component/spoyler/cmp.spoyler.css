@@ -99,3 +99,46 @@ cmp-spoyler {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+	cmp-spoyler .body .table-key-val td {
+		padding: 0 10px;
+		text-align: left;
+	} 
+		cmp-spoyler .body .table-key-val td.key {
+			color: #999;
+		} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

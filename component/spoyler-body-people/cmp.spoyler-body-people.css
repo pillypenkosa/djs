@@ -24,6 +24,36 @@ cmp-spoyler-body-people {
 
 
 
+	cmp-spoyler-body-people .body-wrap .key {
+		color: #999;
+	}
+
+
+
+
+	cmp-spoyler-body-people .table-key-val img {
+		height: 100px;
+		width: 100px;
+		margin: 1px;
+		border-radius: 5px;
+	}
+
+
+	cmp-spoyler-body-people .table-key-val a {
+		text-decoration: none;
+		color: #ff0;
+	}
+
+
+
+
+
+
+
+
+
+
+
 
 
  
